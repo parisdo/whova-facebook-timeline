@@ -1,0 +1,257 @@
+body {
+    background-color: #e9ebee;
+    padding-top: 10px;
+    font-size: 1.2em;
+}
+
+/* page layout */
+.facebook-layout {
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+    color: ##454545;
+}
+
+/* format each individual user post */
+.facebook-layout .create-post {
+    background-color: white;
+    border: 1px solid #DDDFE2;
+    border-radius: 3px;
+    border-bottom-color: #D0D1D5;
+    margin-top: 10px;
+}
+
+/* upload post header */
+div.create-post-header {
+    padding: 8px;
+    background-color: #F6F7F9;
+    display: block;
+    border-bottom: 1px solid #DEE0E3;
+    position: relative;
+}
+
+/* triangle border for "create a post" */
+.create-post-header:before{
+   position: absolute;
+   bottom: 0;
+   height: 0;
+   width: 0;
+   left: 65px;
+   top: 15px;
+   border: 11px solid transparent;
+   border-bottom-color: #E2E4E7;
+   content: "";
+}
+
+/* triangle for "create a post" */
+ .create-post-header:after{
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    width: 0;
+    left: 66px;
+    top: 18px;
+    border: 10px solid transparent;
+    border-bottom-color: white;
+    content: "";
+}
+
+
+.create-post-header span {
+    padding: 0 4px 0 6px;
+    font-weight: 500;
+    color: #4C5057;
+}
+
+
+/* format "create a post" grey bold */
+span.#create-post-header-option {
+    padding: 0 4px 0 0px;
+    font-weight: 500;
+    color: #4C5057;
+}
+
+
+/* format specific header items */
+span.other-header-option {
+    color: #365899;
+    border-left: 1px solid #ced0d4;
+}
+
+
+.create-post-input {
+     width:auto;
+     display: block;
+     position: relative;
+}
+
+/* position profile picture to the left */
+.profile-picture {
+    float: left;
+    margin: 12px 0 0 12px;
+}
+
+
+/* position textarea input to the right of profile picture */
+.create-post-input .textarea-box {
+    background-color: transparent;
+    border: 0;
+    box-sizing: border-box;
+    outline: 0;
+    resize: none;
+    width: 100%;
+}
+
+textarea {
+    width: 80%;
+    white-space: pre-wrap;
+    word-spacing: normal;
+    text-rendering: auto;
+    box-shadow: none;
+    outline: none;
+}
+
+.textarea-input {
+    padding: 18px 12px 14px 12px;
+    overflow: hidden;
+    border: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: transparent;
+    resize: none;
+}
+
+.line-divider {
+    border-top: 1px solid #e9ebee;
+    margin: -12px 0 12px 0;
+}
+
+.upload-section {
+    padding: 12px;
+}
+
+.upload-item {
+    display: inline-block;
+    margin-right: 6px;
+    background-color: #F6F7F9;
+    padding: 6px 10px 6px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: #4C5057;
+}
+
+/********* USER UPLOADS POST *********/
+
+.uploaded-post {
+    border: 1px solid #DDDFE2;
+    border-bottom-color: #D0D1D5;
+    margin-top: 5px;
+    background-color: white;
+    border-radius: 3px;
+    padding: 12px 12px 0 12px;
+}
+
+
+.uploaded-post-header {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.uploaded-profile-picture {
+    float: left;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.uploaded-post-header-info {
+    display: inline-block;
+    width: 90%;
+}
+
+/* format name and arrow so they appear on the same line */
+.name-and-arrow {
+    display: inline-block;
+    width: 100%;
+}
+
+.name {
+    margin-bottom: 2px;
+    padding-right: 22px;
+    font-size: 14px;
+    font-weight: normal;
+    display: inline-block;
+    color: #365899; /* facebook blue color */
+    font-weight: bold;
+    max-width: 200px;;
+}
+
+span.arrow {
+    position: relative;
+    display: block;
+    float: right;
+}
+
+
+.upload-post-time {
+    display: block;
+    position: relative;
+    color: #90949C;
+    font-size: 12px;
+}
+
+
+/* format user reaction */
+.user-reaction {
+    border-top: 1px solid #e5e5e5; /* Divider Line Color */
+    padding: 4px 0 4px 0;
+    margin: 12px 0 0 0;
+}
+
+span.item-reaction {
+    margin-right: 20px;
+    color: #7F7F7F;
+    font-weight: 500;
+}
+
+.user-comments {
+    background-color: #F6F7F9; /* Comment Section Color */
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #DDDFE2;
+    padding-top: 2px;
+    margin-left: -12px;
+    margin-right: -12px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.add-comments {
+    padding: 8px 12px 8px 12px;
+    display: flex;
+    width: 100%;
+}
+
+.comment-user-picture {
+    display: inline-block;
+    width: 40px;
+}
+
+.write-comments {
+    display: inline-block;
+    width: 94%;
+}
+
+/* comment input box */
+.add-comments .write-comments input.comment {
+    padding: 7px 3px 7px 5px;
+    border: 1px solid #dddfe2;
+    outline: none;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+img.icon {
+    margin-right: 2px;
+}
