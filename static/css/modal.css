@@ -1,0 +1,177 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 40px auto; /* 15% from the top and centered */
+    padding: 0px;
+    border: 1px solid #888;
+    max-width: 500px; /* Could be more or less, depending on screen size */
+    overflow: hidden;
+}
+
+
+.textarea-box-modal textarea.textarea-input {
+    font-size: 1.6em;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.facebook-layout .create-post-modal {
+    background-color: white;
+    border: 1px solid #DDDFE2;
+    border-radius: 3px;
+    border-bottom-color: #D0D1D5;
+}
+
+#photo-video.upload-item.modal {
+    background-color: black;
+}
+
+/* change width of upload items to half */
+.upload-item-modal {
+    display: inline-block;
+    margin-right: 6px;
+    background-color: #F6F7F9;
+    padding: 6px 12px 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: #4C5057;
+    width: 48%;
+}
+
+#check-in, #tag-friends, #stickers {
+    margin-top: 6px;
+}
+
+
+#feeling-activity.upload-item-modal, #tag-friends.upload-item-modal {
+    margin-right: 0px;
+}
+
+/* change color of upload item on hover */
+#photo-video.upload-item-modal:hover, #feeling-activity.upload-item-modal:hover,
+#check-in.upload-item-modal:hover,
+#tag-friends.upload-item-modal:hover,
+#stickers.upload-item-modal:hover  {
+    background-color: #DDDFE2;
+}
+
+
+.circle {
+    display: inline-block;
+	width: 14px;
+	height: 14px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    margin-left: 3px
+
+}
+
+.collapse-colors {
+    display: inline-block;
+    margin-left: 15px;
+    margin-bottom: 8px;
+}
+
+.uncollapse-colors {
+    display: none;
+    margin-left: 15px;
+    margin-bottom: 8px;
+}
+
+#collapse {
+    margin-left: 15px
+
+
+}
+
+#white {
+    background-color: #E9EBEE;
+}
+
+#yellow {
+    background-color: #FCD872;
+}
+
+#yellow-orange {
+    background: #F35A69; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left bottom, #FBC971, #F35A69); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top right, #FBC971, #F35A69); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top right, #FBC971, #F35A69); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top right, #FBC971, #F35A69); /* Standard syntax */
+}
+
+#red {
+    background-color: #F35369;
+}
+
+#green-blue {
+     background: #1CB0F8; /* For browsers that do not support gradients */
+     background: -webkit-linear-gradient(left bottom, #5FED90, #1CB0F8); /* For Safari 5.1 to 6.0 */
+     background: -o-linear-gradient(top right, #5FED90, #1CB0F8); /* For Opera 11.1 to 12.0 */
+     background: -moz-linear-gradient(top right, #5FED90, #1CB0F8); /* For Firefox 3.6 to 15 */
+     background: linear-gradient(to top right, #5FED90, #1CB0F8); /* Standard syntax */
+}
+
+#blue {
+    background-color: #4A90E2;
+}
+
+#pink-purple {
+    background: #683EDC; /* For browsers that do not support gradients */
+     background: -webkit-linear-gradient(left bottom, #ED37FA, #683EDC); /* For Safari 5.1 to 6.0 */
+     background: -o-linear-gradient(top right, #ED37FA, #683EDC); /* For Opera 11.1 to 12.0 */
+     background: -moz-linear-gradient(top right, #ED37FA, #683EDC); /* For Firefox 3.6 to 15 */
+     background: linear-gradient(to top right, #ED37FA, #683EDC); /* Standard syntax */
+}
+
+#darkgrey {
+    background-color: #5F6673;
+}
+
+/* position textarea input to the right of profile picture */
+.create-post-input .textarea-box-modal {
+    background-color: transparent;
+    border: 0;
+    box-sizing: border-box;
+    outline: 0;
+    resize: none;
+    width: 100%;
+}
+
+.white-placeholder::-webkit-input-placeholder {
+    color: white;
+    font-weight: 500;
+}
+
+span.close {
+    font-size: 2em;
+    margin-top: -5px;
+}

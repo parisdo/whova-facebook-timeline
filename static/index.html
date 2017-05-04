@@ -17,6 +17,10 @@
     <!-- Custom CSS -->
     <link href="css/custom.css" rel='stylesheet'>
 
+    <!-- Modal CSS -->
+    <link href="css/modal.css" rel='stylesheet'>
+
+
 </head>
 
 <body>
@@ -46,27 +50,106 @@
                         <img src="img/profile-picture.png" alt="Paris Do" height="42" width="42">
                     </div>
                     <div class="textarea-box">
-                        <textarea title="What's on your mind?" class="textarea-input" name="xhpc_message" placeholder="What's on your mind?"></textarea>
+                        <textarea title="Write something here" class="textarea-input" name="xhpc_message" placeholder="Write something here"></textarea>
+
                     </div>
+
                 </div>
 
                 <!-- user will upload photos/videos or reactions (feelings) here -->
                 <div class="upload-section">
                     <div class="line-divider"></div>
                     <span>
-                        <div class="upload-item">
+                        <div class="upload-item" id="photo-video">
                             <img class="icon" src="img/photo-upload-icon.png" alt="Photo Upload Icon" height="20" width="20">
-                            Photo/Activity
+                            Photo/Video
                         </div>
-                        <div class="upload-item">
+                        <div class="upload-item" id="feeling-activity">
                             <img class="icon" src="img/reaction-icon.png" alt="Reaction Icon" height="20" width="20">
                             Feeling/Activity
                         </div>
-                        <div class="upload-item">
-                            <img class="icon" src="img/ellipsis-icon.png" alt="Ellipsis Icon" height="20" width="20">
+                        <div class="upload-item" id="ellipsis">
+                            <img src="img/ellipsis-icon.png" alt="Ellipsis Icon" height="20" width="20">
                         </div>
                     </span>
                 </div>
+            </div>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+            <div class="create-post-modal">
+                <div class="create-post-header">
+                    <span id="create-post-header-option">
+                        <img class="icon" src="img/create-post-icon.png" alt="Create Post Icon" height="20" width="20">
+                        Create a Post
+                    </span>
+                    <span class="other-header-option">
+                        <img class="icon" src="img/photo-video-album-icon.png" alt="Photo Video Album Icon" height="20" width="20">
+                        Photo/Video Album
+                    </span>
+                    <span class="other-header-option">
+                        <img class="icon" src="img/video-icon.png" alt="Live Video Icon" height="20" width="20">
+                        Live Video
+                    </span>
+                            <span class="close">&times;</span>
+                </div>
+
+                <!-- user will enter facebook status here in this section -->
+                <div class="create-post-input">
+                    <div class="profile-picture">
+                        <img src="img/profile-picture.png" alt="Paris Do" height="42" width="42">
+                    </div>
+                    <div class="textarea-box-modal">
+                        <textarea title="Write something here" class="textarea-input" name="xhpc_message" placeholder="Write something here"></textarea>
+                        <br>
+                        <img class="collapse-colors" src="img/collapse-colors.png" alt="Collapse Colors" height="19" width="19">
+                        <img class="uncollapse-colors" src="img/uncollapse-colors.png" alt="Collapse Colors" height="19" width="19">
+                        <span class="circle" id="white"></span>
+                        <span class="circle" id="yellow"></span>
+                        <span class="circle" id="yellow-orange"></span>
+                        <span class="circle" id="red"></span>
+                        <span class="circle" id="green-blue"></span>
+                        <span class="circle" id="blue"></span>
+                        <span class="circle" id="pink-purple"></span>
+                        <span class="circle" id="darkgrey"></span>
+                    </div>
+
+                </div>
+
+                <!-- user will upload photos/videos or reactions (feelings) here -->
+                <div class="upload-section">
+                    <div class="line-divider"></div>
+                    <span>
+                        <div class="upload-item-modal" id="photo-video">
+                            <img class="icon" src="img/photo-upload-icon.png" alt="Photo Upload Icon" height="20" width="20">
+                            Photo/Video
+                        </div>
+                        <div class="upload-item-modal" id="feeling-activity">
+                            <img class="icon" src="img/reaction-icon.png" alt="Reaction Icon" height="20" width="20">
+                            Feeling/Activity
+                        </div>
+                        <div class="upload-item-modal" id="check-in">
+                            <img class="icon" src="img/check-in-icon.png" alt="Check In Icon" height="20" width="20">
+                            Check In
+                        </div>
+                        <div class="upload-item-modal" id="tag-friends">
+                            <img class="icon" src="img/tag-friends-icon.png" alt="Tag Friends Icon" height="20" width="20">
+                            Tag Friends
+                        </div>
+
+                        <div class="upload-item-modal" id="stickers">
+                            <img class="icon" src="img/sticker-icon.png" alt="Sticker Icon" height="20" width="20">
+                            Stickers
+                        </div>
+
+                    </span>
+                </div>
+            </div>
+            </div>
+
             </div>
 
             <div class="uploaded-post">
@@ -94,15 +177,15 @@
                 <div class="user-reaction">
                     <span class="item-reaction">
                         <img class="icon" src="img/like-icon.png" alt="Like Icon" height="20" width="20">
-                        Like
+                        <span id="like">Like</span>
                     </span>
                     <span class="item-reaction">
                         <img class="icon" src="img/comment-icon.png" alt="Comment Icon" height="20" width="20">
-                        Comment
+                        <span id="comment">Comment</span>
                     </span>
                     <span class="item-reaction">
                         <img class="icon" src="img/share-icon.png" alt="Share Icon" height="20" width="20">
-                        Share
+                        <span id="share">Share</span>
                     </span>
                 </div>
                 <div class="user-comments">
@@ -127,7 +210,7 @@
                     <div class="uploaded-post-header-info">
                         <div class="name-and-arrow">
                             <div class="name">
-                                Sandeep Prabhu
+                                <p>Sandeep Prabhu</p>
                             </div>
                             <span class="arrow">
                                 <img src="img/arrow-icon.png" alt="Arrow Icon" height="16" width="20">
@@ -180,6 +263,14 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <!-- Modal Javascript -->
+    <script src="js/modal.js"></script>
+
+    <!-- Textbox Colors Javascript -->
+    <script src="js/textbox-colors.js"></script>
+
+    <!-- Reactions Javascript -->
+    <script src="js/reactions.js"></script>
 </body>
 
 </html>

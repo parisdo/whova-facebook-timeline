@@ -101,10 +101,11 @@ span.other-header-option {
     outline: 0;
     resize: none;
     width: 100%;
+
 }
 
 textarea {
-    width: 80%;
+    width: 83%;
     white-space: pre-wrap;
     word-spacing: normal;
     text-rendering: auto;
@@ -135,11 +136,25 @@ textarea {
     display: inline-block;
     margin-right: 6px;
     background-color: #F6F7F9;
-    padding: 6px 10px 6px 10px;
+    padding: 6px 12px 6px 12px;
     border-radius: 20px;
     font-weight: 500;
     color: #4C5057;
 }
+
+/* change color of upload item on hover */
+#photo-video.upload-item:hover {
+    background-color: #DDDFE2;
+}
+
+#feeling-activity.upload-item:hover {
+    background-color: #DDDFE2;
+}
+
+#ellipsis.upload-item:hover {
+    background-color: #DDDFE2;
+}
+
 
 /********* USER UPLOADS POST *********/
 
@@ -184,6 +199,13 @@ textarea {
     color: #365899; /* facebook blue color */
     font-weight: bold;
     max-width: 200px;;
+    font-size: 1.1em;
+}
+
+.name:hover {
+    text-decoration: underline;
+    -moz-text-decoration-color: #365899; /* Code for Firefox */
+    text-decoration-color: #365899;
 }
 
 span.arrow {
@@ -213,6 +235,19 @@ span.item-reaction {
     color: #7F7F7F;
     font-weight: 500;
 }
+
+span#like:hover {
+    text-decoration: underline;
+}
+
+span#comment:hover {
+    text-decoration: underline;
+}
+
+span#share:hover {
+    text-decoration: underline;
+}
+
 
 .user-comments {
     background-color: #F6F7F9; /* Comment Section Color */
