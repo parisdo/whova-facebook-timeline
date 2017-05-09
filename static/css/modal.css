@@ -175,3 +175,52 @@ span.close {
     font-size: 2em;
     margin-top: -5px;
 }
+
+/* custom and post button */
+.submit-post-modal {
+    border-top: 2px solid #dddfe2;
+    background: #F6F7F9;
+    padding: 10px;
+    text-align: right;
+}
+
+button.custom {
+    background-color: #F6F7F9;
+    color: #4B4F56;
+    border-radius: 2px;
+    border: 1px solid #dddfe2;
+    padding: 6spx 15px 6px 15px;
+}
+
+button.post {
+    background-color: #4267B2;
+    color: white;
+    border-radius: 2px;
+    border: none;
+    padding: 6px 15px 6px 15px;
+    margin-left: 7px
+}
+
+/* when the user hovers over custom */
+button.custom:hover {
+    background-color: #dddfe2;
+}
+
+
+.image-upload
+{
+  opacity: 0;
+  position: absolute;
+}
+
+
+.thumb{
+    width:100px;
+    height:100px;
+    margin:5px;
+    float:left;
+}
+
+.uploader{
+    clear:both;
+}

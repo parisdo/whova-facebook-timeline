@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta name="description" content="">
     <meta name="author" content="Paris Do">
 
@@ -75,6 +75,8 @@
                 </div>
             </div>
 
+            <div ng-app='app'>
+                <div ng-controller='CommentsCtrl' ng-cloak>
             <!-- The Modal -->
             <div id="myModal" class="modal">
 
@@ -103,7 +105,8 @@
                         <img src="img/profile-picture.png" alt="Paris Do" height="42" width="42">
                     </div>
                     <div class="textarea-box-modal">
-                        <textarea title="Write something here" class="textarea-input" name="xhpc_message" placeholder="Write something here"></textarea>
+
+                        <textarea ng-model='name' type='text' title="Write something here" class="textarea-input" name="xhpc_message" placeholder="Write something here"></textarea>
                         <br>
                         <img class="collapse-colors" src="img/collapse-colors.png" alt="Collapse Colors" height="19" width="19">
                         <img class="uncollapse-colors" src="img/uncollapse-colors.png" alt="Collapse Colors" height="19" width="19">
@@ -123,7 +126,8 @@
                 <div class="upload-section">
                     <div class="line-divider"></div>
                     <span>
-                        <div class="upload-item-modal" id="photo-video">
+                        <div type="file" class="upload-item-modal" id="photo-video">
+                             <!-- <textarea ng-model='text'></textarea> -->
                             <img class="icon" src="img/photo-upload-icon.png" alt="Photo Upload Icon" height="20" width="20">
                             Photo/Video
                         </div>
@@ -145,14 +149,23 @@
                             Stickers
                         </div>
 
+
                     </span>
+                </div>
+                <div class="submit-post-modal">
+                        <button class="custom" type="button">
+                                <img class="icon" src="img/gear-icon.png" alt="Gear Icon" height="18" width="18">
+                                Custom
+                                <img class="icon" src="img/collapse-icon.png" alt="Collapse Icon" height="15" width="15">
+                        </button>
+                        <button class='post button' ng-click='submit()' type='submit' value='Submit' type="button">Post</button>
                 </div>
             </div>
             </div>
 
             </div>
 
-            <div class="uploaded-post">
+            <div class="uploaded-post" ng-repeat='comment in comments'>
                 <div class="uploaded-post-header">
                     <div class="uploaded-profile-picture">
                         <img src="img/profile-picture.png" alt="Paris Do" height="42" width="42">
@@ -162,8 +175,9 @@
                             <div class="name">
                                 Sandeep Prabhu
                             </div>
-                            <span class="arrow">
-                                <img src="img/arrow-icon.png" alt="Arrow Icon" height="16" width="20">
+                            <span ng-click='drop(comment)' class="arrow">
+                                <!-- <img src="img/arrow-icon.png" alt="Arrow Icon" height="16" width="20"> -->
+                                <span class="glyphicon glyphicon-remove"></span>
                             </span>
                         </div>
                         <div class="upload-post-time">
@@ -171,13 +185,31 @@
                         </div>
                     </div>
                 </div>
+                <div class="comment-title">
+                    {{comment.name}}
+                </div>
+
                 <div class="media-post">
                     <img src="img/shibainu.png" alt="Paris Do" height="100%" width="100%">
                 </div>
+
+                <script type="text/ng-template" id="like"></script>
+
+                <script type="text/ng-template" id="unlike">
+
+                    <div class="liked">
+                      <img src="img/liked-icon.png" alt="Like Icon" height="20" width="20">
+                      <span class="liked-name">Paris Do</span>
+                    </div>
+                </script>
+
+
+
+
                 <div class="user-reaction">
-                    <span class="item-reaction">
+                    <span ng-click="template='page2'" class="item-reaction">
                         <img class="icon" src="img/like-icon.png" alt="Like Icon" height="20" width="20">
-                        <span id="like">Like</span>
+                        <span id="like"  ng-click="like = !like">Like</span>
                     </span>
                     <span class="item-reaction">
                         <img class="icon" src="img/comment-icon.png" alt="Comment Icon" height="20" width="20">
@@ -188,7 +220,10 @@
                         <span id="share">Share</span>
                     </span>
                 </div>
+
                 <div class="user-comments">
+                    <div ng-include="'like'" ng-if="like" ></div>
+                    <div ng-include="'unlike'" ng-if="!like" ></div>
                     <div class="add-comments">
                         <div class="comment-user-picture">
                             <img src="img/profile-picture.png" alt="Paris Do" height="32" width="32">
@@ -201,9 +236,19 @@
                 </div>
 
             </div>
-
-
         </div>
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+</div>
 
     </div>
     <!-- /.container -->
@@ -214,6 +259,9 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <!-- Bootstrap Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
     <!-- Modal Javascript -->
     <script src="js/modal.js"></script>
 
@@ -222,6 +270,13 @@
 
     <!-- Reactions Javascript -->
     <script src="js/reactions.js"></script>
+
+    <!-- Upload Image Via Frontend -->
+    <script src="js/image-uploader.js"></script>
+
+    <!-- Post -->
+    <script src="js/post.js"></script>
+
 </body>
 
 </html>

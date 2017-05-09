@@ -22,6 +22,11 @@ $("#ellipsis").click( function () {
     $("body").css("overflow", "hidden");
 });
 
+$("#photo-video").click( function () {
+    modal.style.display = "block";
+    $("body").css("overflow", "hidden");
+});
+
 $("#feeling-activity").click( function () {
     modal.style.display = "block";
     $("body").css("overflow", "hidden");
@@ -29,6 +34,7 @@ $("#feeling-activity").click( function () {
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
+    console.log("hi");
     modal.style.display = "none";
     // reset colors to original state
     $("body").css("overflow", "auto");
@@ -63,3 +69,20 @@ window.onclick = function(event) {
     $(".textarea-box-modal textarea.textarea-input").css("text-align", "left");
     }
 }
+
+$(".post.button").click( function () {
+    modal.style.display = "none";
+    // reset colors to original state
+    $("body").css("overflow", "auto");
+    $("textarea.textarea-input").css("width", "83%");
+    $("textarea.textarea-input").css("padding-top", "18px");
+    $("textarea.textarea-input").css("padding-bottom", "14px");
+    $(".profile-picture").show();
+    $(".uncollapse-colors").css("display", "none");
+    $(".collapse-colors").css("display", "inline-block");
+    $("#white, #yellow, #yellow-orange, #red, #blue, #darkgrey, #green-blue, #pink-purple").show();
+    $(".textarea-box-modal").css("background", "white");
+    $(".textarea-box-modal .textarea-input").removeClass("white-placeholder");
+    $(".textarea-box-modal textarea.textarea-input").css("text-align", "left");
+
+});

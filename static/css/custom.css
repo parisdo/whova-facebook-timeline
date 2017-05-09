@@ -290,3 +290,28 @@ span#share:hover {
 img.icon {
     margin-right: 2px;
 }
+
+/* user submits a photo and a comment */
+.comment-title {
+    padding-bottom: 12px;
+}
+
+/* when user hovers over remove button */
+span.glyphicon.glyphicon-remove:before {
+    color: lightgrey;
+}
+
+span.glyphicon.glyphicon-remove:hover:before {
+    color: grey;
+}
+
+/* when the user likes a post */
+.liked {
+    padding: 8px 12px 0 12px;
+    color: #365899;
+    font-weight: 400;
+}
+
+.liked-name {
+    padding-left: -10px;
+}
